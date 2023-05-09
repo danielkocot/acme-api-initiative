@@ -1,0 +1,29 @@
+site_name: ACME API Initiative Documentation
+
+plugins:
+  - search
+  - multirepo:
+      cleanup: true
+      keep_docs_dir: true
+      repos:
+        - section: Decision Records
+          import_url: 'https://github.com/danielkocot/decision_records_example?branch=main&docs_dir=*'
+  #- macros
+  #- build_plantuml
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-schema: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions: 
+  - pymdownx.keys
